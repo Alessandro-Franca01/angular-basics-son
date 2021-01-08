@@ -1,0 +1,33 @@
+<form (submit)="enviarForm()">
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Produto: {{produto?.name}}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input class="form-control" name="name" type="text" placeholder={{produto?.name}} [(ngModel)]="produtoUpdate.name">
+                    </div>
+                    <div class="form-group">
+                        <label>Categoria</label>
+                        <input class="form-control" name="categoria" type="text" placeholder={{produto?.categoria}} [(ngModel)]="produtoUpdate.categoria">
+                    </div>
+                    <div class="form-group">
+                        <label>Valor</label>
+                        <input class="form-control" name="valor" type="text" placeholder={{produto?.valor}} [(ngModel)]="produtoUpdate.valor">
+                    </div>                        
+                </div>                        
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <!-- O evento está sendo capturado com sucesso -->
+                    <button type="submit" class="btn btn-primary" (click)="Update($event)">Update</button>            
+                </div>
+            </div>
+        </div>        
+    </div>
+</form>

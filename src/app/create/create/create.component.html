@@ -1,0 +1,27 @@
+<!-- Aqui vai ser criado o produto: salvo no array -->
+<div class="mt-2">
+    <div>
+        <h2> Cadastro de Produto </h2>                         
+    </div>
+  <div>
+    <form>
+      <div class="form-group">
+        <input name="nome" type="text" class="form-control" [(ngModel)]="nome" placeholder="Nome" required>
+      </div>
+      <div class="form-group">
+        <input name="valor" type="text" class="form-control" [(ngModel)]="valor" placeholder="Valor" required>
+      </div>
+      <div class="form-group">
+        <input name="categoria" type="text" class="form-control" [(ngModel)]="categoria" placeholder="Categoria" required>        
+      </div>
+        <!-- O Botão está chamando porém não está funcionando como deveria : Funcionando!!  -->
+        <button type="button" class="btn btn btn-info ml-2 mr-2" (click)="produto = create()"> Save </button>
+        <button type="reset" class="btn btn btn-danger mr-2"> Clear </button>
+        <button type="button" class="btn btn btn-primary" (click)="getModal()"> Show </button>
+    </form>
+  </div>
+</div>
+<!-- Testar ver se consigo chamar o mesmo componente dentro de outros componentes -->
+<app-modal></app-modal>
+<!-- Isso vai torna o componente list filho do componente create: Deve resolver o problema -->
+<app-list [list]="produtos"></app-list>

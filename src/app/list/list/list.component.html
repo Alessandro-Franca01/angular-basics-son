@@ -1,0 +1,43 @@
+<div class="mt-2">
+    <h3>
+        Listando os Produtos
+    </h3>
+    <div class="table-responsive-md">
+        <table class="table text-center">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Value</th>
+                <th scope="col">Category</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Value</th>
+                <th scope="col">Acões</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Tenho que pegar esse id e enviar para saber de qual produto se trata: ERRO AQUI!!! -->
+            <tr *ngFor="let prod of listProduto">
+                <td>{{prod.id}}</td>
+                <td>{{prod.name}}</td>
+                <td>{{prod.categoria}}</td>
+                <td>{{prod.valor}}</td>
+                <td>{{prod.categoria}}</td>
+                <td>{{prod.name}}</td>
+                <td>{{prod.categoria}}</td>
+                <td>{{prod.valor}}</td>
+                <td>
+                    <button type="button" class="btn btn btn-info mr-2" (click)="produtoRecebido = getModal(prod)"> Edit </button>                    
+                    <button type="button" class="btn btn btn-warning" (click)="getModalDelete(prod)"> Remover </button>                                 
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Para resolver esse novo problema vou te que chamar o componente modal aqui -->
+<app-modal (onSubmit)="onNewProduto($event)" ></app-modal>
+<model-delete (onDelete)="onDeleteProduto($event)"></model-delete>
+

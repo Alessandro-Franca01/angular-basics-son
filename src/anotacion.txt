@@ -1,0 +1,23 @@
+ Arquivo é para Listar todos os conteudos:
+
+-- Estudados:
+
+* Criação de componentes;
+* DataBind;
+* Interpolação;
+* Couchetes;
+* Diretivas;
+* @Input, etc;
+* [(ngModule)], etc;
+
+-- Para Estudar:
+* Requisições Http( Rest );
+* Dashboard ( Estrutura );
+* etc
+
+
+-- Implementações:
+* Captura valores com os dados gerados pelos componentes filhos (herança);
+* Pesquisar mais sobre Dashboard, tentar usar uma estrutura já pronta!
+
+

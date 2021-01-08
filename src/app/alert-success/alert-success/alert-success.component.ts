@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-modal-delete',
+  selector: 'app-alert-success',
   template: `
     <p>
-      modal-delete works!
+      alert-success works!
     </p>
   `,
   styles: [
   ]
 })
-export class ModalDeleteComponent implements OnInit {
+export class AlertSuccessComponent implements OnInit {
 
   constructor() { }
 
